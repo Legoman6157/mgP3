@@ -4,7 +4,6 @@ IRsend mySender;
 
 void setup() {
   Serial.begin(9600);
-  mySender.
 }
 
 /* Instructions on how to set data that you want to send
@@ -23,7 +22,7 @@ void loop() {
   if (Serial.read() != -1) {
     //send a code every time a character is received from the serial port
     //Sony DVD power A8BCA
-    mySender.send(NEC, 0xF77DB57B, 32);
+    mySender.send(NEC, 0xF77DF77D, 32);
     Serial.println("Sent message");
     delay(40);
   }
